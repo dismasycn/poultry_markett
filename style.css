@@ -1,0 +1,262 @@
+body { background-color: #f8f9fa; }
+.sidebar { background-color: #e9ecef; min-height: 100vh; }
+.sidebar .nav-link { color: #333; }
+.sidebar .nav-link:hover { background: #d4edda; border-radius: 5px; }
+.card { border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }/* ========================================
+   POULTRY MARKET – ENHANCED COLOR PALETTE
+   ======================================== */
+
+/* ===== LIGHT MODE (Default) ===== */
+:root {
+    /* Backgrounds */
+    --bg-body: #eef2f7;
+    --bg-card: #f5f7fa;
+    --bg-sidebar: #dfe4ea;
+    --bg-navbar: #2d6a4f;           /* dark forest green */
+    --bg-input: #ffffff;
+    --bg-modal: #f5f7fa;
+    --bg-table-stripe: #eef2f7;
+    --bg-table-hover: #dce3ed;
+    --bg-badge: #2d6a4f;
+
+    /* Text */
+    --text-primary: #1e2a3a;
+    --text-secondary: #4a5568;
+    --text-muted: #6b7a8f;
+    --text-white: #ffffff;
+    --text-navbar: #ffffff;
+    --text-link: #1a4d8a;
+
+    /* Borders & Shadows */
+    --border-color: #cbd5e1;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --card-shadow: 0 4px 12px var(--shadow-color);
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+    --bg-body: #1a1e26;
+    --bg-card: #242a33;
+    --bg-sidebar: #14181f;
+    --bg-navbar: #0d6efd;
+    --bg-input: #2d3238;
+    --bg-modal: #242a33;
+    --bg-table-stripe: #242a33;
+    --bg-table-hover: #2f3640;
+
+    --text-primary: #e8edf5;
+    --text-secondary: #adb5bd;
+    --text-muted: #8a9bb0;
+    --text-white: #ffffff;
+    --text-navbar: #ffffff;
+    --text-link: #6ea8fe;
+
+    --border-color: #3a404a;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --card-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* ===== Apply Variables ===== */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--bg-sidebar);
+    transition: background-color var(--transition-speed);
+    border-right: 1px solid var(--border-color);
+}
+.sidebar .nav-link {
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin: 2px 8px;
+    transition: all 0.2s;
+}
+.sidebar .nav-link:hover {
+    background: rgba(45, 106, 79, 0.12);
+    color: var(--bg-navbar);
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+.sidebar .nav-link.active {
+    background: var(--bg-navbar);
+    color: white;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: background-color var(--transition-speed), border var(--transition-speed), box-shadow var(--transition-speed);
+    border-radius: 12px;
+}
+.card-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1rem 1.25rem;
+}
+
+/* Tables */
+.table {
+    color: var(--text-primary);
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--bg-table-stripe);
+}
+.table-hover > tbody > tr:hover {
+    background-color: var(--bg-table-hover);
+}
+.table td, .table th {
+    border-color: var(--border-color);
+    padding: 0.75rem 1rem;
+}
+.table thead th {
+    background-color: var(--bg-sidebar);
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Forms */
+.form-control, .form-select {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    transition: border-color 0.2s;
+}
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border-color: var(--bg-navbar);
+    box-shadow: 0 0 0 0.2rem rgba(45, 106, 79, 0.25);
+}
+
+/* Modals */
+.modal-content {
+    background-color: var(--bg-modal);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+.modal-header, .modal-footer {
+    border-color: var(--border-color);
+}
+
+/* Buttons – override with deeper greens */
+.btn-success {
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+}
+.btn-success:hover {
+    background-color: #1f4a37;
+    border-color: #1f4a37;
+}
+.btn-outline-success {
+    color: #2d6a4f;
+    border-color: #2d6a4f;
+}
+.btn-outline-success:hover {
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+}
+
+/* Primary buttons */
+.btn-primary {
+    background-color: #1a4d8a;
+    border-color: #1a4d8a;
+}
+.btn-primary:hover {
+    background-color: #123a6b;
+    border-color: #123a6b;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.4rem 0.7rem;
+    border-radius: 50px;
+}
+.badge-success {
+    background-color: #2d6a4f;
+}
+.badge-warning {
+    background-color: #e6a800;
+    color: #1e2a3a;
+}
+.badge-danger {
+    background-color: #b91c1c;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-left: 4px solid var(--bg-navbar);
+}
+
+/* ===== Additional Utility ===== */
+/* Make all white backgrounds slightly softer in light mode */
+.bg-white {
+    background-color: var(--bg-card) !important;
+}
+.bg-light {
+    background-color: var(--bg-body) !important;
+}
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Stat cards (dashboard) */
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Quick action buttons */
+.quick-action {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background: var(--bg-body);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+.quick-action:hover {
+    background: var(--bg-sidebar);
+    color: var(--bg-navbar);
+    border-color: var(--bg-navbar);
+}
+.btn-outline-success:hover {
+    background-color: #2d6a4f;
+    color: white;
+    border-color: #2d6a4f;
+}
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(45, 106, 79, 0.25);
+}
